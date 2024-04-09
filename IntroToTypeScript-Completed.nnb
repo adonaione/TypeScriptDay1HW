@@ -2143,25 +2143,43 @@
         {
             "language": "typescript",
             "source": [
-                "//Answer\ntype CTStudent = {\n    id:string,\n    name: string,\n    age: number,\n    isTired: boolean,\n    projectsCompleted: string[],\n    pet?: string\n}\n\nlet studentn1: CTStudent = {\n    id: 'GMK435&g62L00',\n    name: 'John Smith',\n    age: 24,\n    isTired: true,\n    projectsCompleted:[\"HTML Portfolio\", \"Fakebook\", \"Pokemon API Project\", \"Weather Bug\"],\n    pet: 'dog'\n}\n\nlet studentn2: CTStudent = {\n    id: '6KGS%54GmlY76',\n    name: 'Jenny Hawthorne',\n    age: 28,\n    isTired: false,\n    projectsCompleted:[\"HTML Portfolio\"],\n}\n\nlet studentn3: CTStudent = {\n    id: '6KGS%54GmlY76',\n    name: 'Neo',\n    age: 57,\n    isTired: true,\n    projectsCompleted:[\"Matrix\",\"Biological Interface Program\"],\n    pet:'cat'\n}\n\nstudentn1\nstudentn2\nstudentn3\n"
+                "//Answer\ntype CTStudent = {\n    id:string,\n    name: string,\n    age: number,\n    isTired: boolean,\n    projectsCompleted: string[],\n    pet?: string\n}\n\nlet studentn1: CTStudent = {\n    id: 'GMK435&g62L00',\n    name: 'John Smith',\n    age: 24,\n    isTired: true,\n    projectsCompleted:[\"HTML Portfolio\", \"Fakebook\", \"Pokemon API Project\", \"Weather Bug\"],\n    pet: 'dog'\n}\n\nlet studentn2: CTStudent = {\n    id: '6KGS%54GmlY76',\n    name: 'Jenny Hawthorne',\n    age: 28,\n    isTired: false,\n    projectsCompleted:[\"HTML Portfolio\"],\n}\n\nlet studentn3: CTStudent = {\n    id: '6KGS%54GmlY76',\n    name: 'Neo',\n    age: 57,\n    isTired: true,\n    projectsCompleted:[\"Matrix\",\"Biological Interface Program\"],\n    pet:'cat'\n}\n\nconsole.log(studentn1)\nconsole.log(studentn2)\nconsole.log(studentn3)\n"
             ],
             "outputs": [
                 {
                     "items": [
                         {
-                            "mime": "text/plain",
+                            "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "{",
-                                "  id: \u001b[32m'6KGS%54GmlY76'\u001b[39m,",
-                                "  name: \u001b[32m'Neo'\u001b[39m,",
-                                "  age: \u001b[33m57\u001b[39m,",
-                                "  isTired: \u001b[33mtrue\u001b[39m,",
+                                "  id: 'GMK435&g62L00',",
+                                "  name: 'John Smith',",
+                                "  age: 24,",
+                                "  isTired: true,",
                                 "  projectsCompleted: [",
-                                "    \u001b[32m'Matrix'\u001b[39m,",
-                                "    \u001b[32m'Biological Interface Program'\u001b[39m",
+                                "    'HTML Portfolio',",
+                                "    'Fakebook',",
+                                "    'Pokemon API Project',",
+                                "    'Weather Bug'",
                                 "  ],",
-                                "  pet: \u001b[32m'cat'\u001b[39m",
-                                "}"
+                                "  pet: 'dog'",
+                                "}",
+                                "{",
+                                "  id: '6KGS%54GmlY76',",
+                                "  name: 'Jenny Hawthorne',",
+                                "  age: 28,",
+                                "  isTired: false,",
+                                "  projectsCompleted: [ 'HTML Portfolio' ]",
+                                "}",
+                                "{",
+                                "  id: '6KGS%54GmlY76',",
+                                "  name: 'Neo',",
+                                "  age: 57,",
+                                "  isTired: true,",
+                                "  projectsCompleted: [ 'Matrix', 'Biological Interface Program' ],",
+                                "  pet: 'cat'",
+                                "}",
+                                ""
                             ]
                         }
                     ]
@@ -2185,7 +2203,7 @@
         {
             "language": "typescript",
             "source": [
-                "//Given\ntype Fruit1={\n    color?:string,\n    shape?:string\n}\n\nlet apple:Fruit1={color:\"red\", shape:\"sphere\"}\nlet eaten:Fruit1=null\n\n//Answer\nfunction  eat(fruit:Fruit1):void{\n    if (fruit != null){\n        console.log(`${fruit.color}`)\n    } else {\n        console.log('You ate my fruit already')\n    }\n}\n\neat(apple)\neat(eaten)"
+                "//Given\ntype Fruit1={\n    color?:string,\n    shape?:string\n}\n\nlet apple:Fruit1={color:\"red\", shape:\"sphere\"}\nlet eaten:Fruit1=null\n\n//Answer\nfunction  eat(fruit:Fruit1|null):void{\n    if (fruit != null){\n        console.log(fruit.color)\n    } else {\n        console.log('You ate my fruit already')\n    }\n}\n\neat(apple)\neat(eaten)"
             ],
             "outputs": [
                 {
